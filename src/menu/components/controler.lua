@@ -35,11 +35,11 @@ function Controler.GoDown(menu)
     local newIndex = menu.index + 1
     local skipped = false
 
-    if newIndex > menu.counter then
-        newIndex = 1
-    end
+    -- if newIndex > menu.counter then
+    --     newIndex = 1
+    -- end
 
-    while (newIndex <= menu.counter)  do
+    while (newIndex <= menu.counter) do -- Need some rework here
         local itemSkipable = menu.Items.stock[newIndex] == 'separator' or menu.Items.stock[newIndex] == 'line'
         if not itemSkipable then
             break
